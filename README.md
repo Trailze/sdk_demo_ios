@@ -29,4 +29,4 @@ A barebones demo app to get started with the Trailze SDK on iOS
 
 ## And... we're done.
 
-Please check out the [iOS Integration](https://docs.trailze.com/#integration-ios) section of the documentation to see the different features you can configure.
+Please check out the [iOS Integration](https://docs.trailze.com/#integration-ios) section in the documentation to see the host of different features you can configure.
