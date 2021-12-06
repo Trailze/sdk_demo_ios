@@ -10,12 +10,21 @@
 		4D444D7A258BF31C5696DE22 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED79FD4DAA20D06260A211B5 /* Pods_demo.framework */; };
 		532BFBA926DEA05B00868EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BFBA826DEA05B00868EAD /* AppDelegate.swift */; };
 		532BFBAB26DEA05B00868EAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BFBAA26DEA05B00868EAD /* SceneDelegate.swift */; };
-		532BFBAD26DEA05B00868EAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BFBAC26DEA05B00868EAD /* ViewController.swift */; };
+		532BFBAD26DEA05B00868EAD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532BFBAC26DEA05B00868EAD /* MainViewController.swift */; };
 		532BFBB226DEA05D00868EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532BFBB126DEA05D00868EAD /* Assets.xcassets */; };
 		532BFBB526DEA05D00868EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532BFBB326DEA05D00868EAD /* LaunchScreen.storyboard */; };
 		532BFBBE26DEAD3300868EAD /* Trailze.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532BFBBC26DEAD3300868EAD /* Trailze.xcframework */; };
 		532BFBBF26DEAD3300868EAD /* TrailzeResourceBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 532BFBBD26DEAD3300868EAD /* TrailzeResourceBundle.bundle */; };
 		532BFBC026DEAD4200868EAD /* TrailzeResourceBundle.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 532BFBBD26DEAD3300868EAD /* TrailzeResourceBundle.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		536147DA275E06F000BE68C8 /* ManeuverAndDistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536147D9275E06F000BE68C8 /* ManeuverAndDistanceViewController.swift */; };
+		53A51B04275A14C400367D49 /* ModuleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51B03275A128400367D49 /* ModuleSelectionViewController.swift */; };
+		53A51B05275A14CB00367D49 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51AFE275A127400367D49 /* InstructionViewController.swift */; };
+		53A51B06275A14CE00367D49 /* ModularMapNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51AFF275A127400367D49 /* ModularMapNavigationViewController.swift */; };
+		53A51B07275A14D100367D49 /* ManeuverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51B00275A127400367D49 /* ManeuverViewController.swift */; };
+		53A51B08275A14D300367D49 /* TimeAndDistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51B01275A127400367D49 /* TimeAndDistanceViewController.swift */; };
+		53A51B09275A14D600367D49 /* MaplessTimeAndDistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51AFB275A126B00367D49 /* MaplessTimeAndDistanceViewController.swift */; };
+		53A51B0A275A14D900367D49 /* ModularMaplessNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51AFC275A126B00367D49 /* ModularMaplessNavigationViewController.swift */; };
+		53A51B0D275A213700367D49 /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A51B0C275A213700367D49 /* AddressSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,12 +45,21 @@
 		532BFBA526DEA05B00868EAD /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		532BFBA826DEA05B00868EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		532BFBAA26DEA05B00868EAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		532BFBAC26DEA05B00868EAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		532BFBAC26DEA05B00868EAD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		532BFBB126DEA05D00868EAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		532BFBB426DEA05D00868EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		532BFBB626DEA05D00868EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		532BFBBC26DEAD3300868EAD /* Trailze.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Trailze.xcframework; sourceTree = "<group>"; };
 		532BFBBD26DEAD3300868EAD /* TrailzeResourceBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TrailzeResourceBundle.bundle; sourceTree = "<group>"; };
+		536147D9275E06F000BE68C8 /* ManeuverAndDistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManeuverAndDistanceViewController.swift; sourceTree = "<group>"; };
+		53A51AFB275A126B00367D49 /* MaplessTimeAndDistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaplessTimeAndDistanceViewController.swift; sourceTree = "<group>"; };
+		53A51AFC275A126B00367D49 /* ModularMaplessNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularMaplessNavigationViewController.swift; sourceTree = "<group>"; };
+		53A51AFE275A127400367D49 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		53A51AFF275A127400367D49 /* ModularMapNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularMapNavigationViewController.swift; sourceTree = "<group>"; };
+		53A51B00275A127400367D49 /* ManeuverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManeuverViewController.swift; sourceTree = "<group>"; };
+		53A51B01275A127400367D49 /* TimeAndDistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndDistanceViewController.swift; sourceTree = "<group>"; };
+		53A51B03275A128400367D49 /* ModuleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleSelectionViewController.swift; sourceTree = "<group>"; };
+		53A51B0C275A213700367D49 /* AddressSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchViewController.swift; sourceTree = "<group>"; };
 		6C99D608FFFBFB8DB5241E00 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 		80E9388CC81A8ABD3FB00F83 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		ED79FD4DAA20D06260A211B5 /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,14 +109,47 @@
 		532BFBA726DEA05B00868EAD /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				53A51AF9275A125400367D49 /* ViewControllers */,
 				532BFBA826DEA05B00868EAD /* AppDelegate.swift */,
 				532BFBAA26DEA05B00868EAD /* SceneDelegate.swift */,
-				532BFBAC26DEA05B00868EAD /* ViewController.swift */,
 				532BFBB126DEA05D00868EAD /* Assets.xcassets */,
 				532BFBB326DEA05D00868EAD /* LaunchScreen.storyboard */,
 				532BFBB626DEA05D00868EAD /* Info.plist */,
 			);
 			path = demo;
+			sourceTree = "<group>";
+		};
+		53A51AF9275A125400367D49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				53A51B03275A128400367D49 /* ModuleSelectionViewController.swift */,
+				53A51AFD275A127400367D49 /* MapNavigation */,
+				53A51AFA275A126B00367D49 /* MaplessNavigation */,
+				53A51B0C275A213700367D49 /* AddressSearchViewController.swift */,
+				532BFBAC26DEA05B00868EAD /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		53A51AFA275A126B00367D49 /* MaplessNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				53A51B00275A127400367D49 /* ManeuverViewController.swift */,
+				53A51AFB275A126B00367D49 /* MaplessTimeAndDistanceViewController.swift */,
+				53A51AFC275A126B00367D49 /* ModularMaplessNavigationViewController.swift */,
+			);
+			path = MaplessNavigation;
+			sourceTree = "<group>";
+		};
+		53A51AFD275A127400367D49 /* MapNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				53A51AFE275A127400367D49 /* InstructionViewController.swift */,
+				53A51AFF275A127400367D49 /* ModularMapNavigationViewController.swift */,
+				53A51B01275A127400367D49 /* TimeAndDistanceViewController.swift */,
+				536147D9275E06F000BE68C8 /* ManeuverAndDistanceViewController.swift */,
+			);
+			path = MapNavigation;
 			sourceTree = "<group>";
 		};
 		868AF1F4A4D4504B45FA76BA /* Pods */ = {
@@ -225,7 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				532BFBAD26DEA05B00868EAD /* ViewController.swift in Sources */,
+				53A51B06275A14CE00367D49 /* ModularMapNavigationViewController.swift in Sources */,
+				53A51B07275A14D100367D49 /* ManeuverViewController.swift in Sources */,
+				53A51B08275A14D300367D49 /* TimeAndDistanceViewController.swift in Sources */,
+				53A51B0A275A14D900367D49 /* ModularMaplessNavigationViewController.swift in Sources */,
+				53A51B09275A14D600367D49 /* MaplessTimeAndDistanceViewController.swift in Sources */,
+				53A51B05275A14CB00367D49 /* InstructionViewController.swift in Sources */,
+				536147DA275E06F000BE68C8 /* ManeuverAndDistanceViewController.swift in Sources */,
+				532BFBAD26DEA05B00868EAD /* MainViewController.swift in Sources */,
+				53A51B0D275A213700367D49 /* AddressSearchViewController.swift in Sources */,
+				53A51B04275A14C400367D49 /* ModuleSelectionViewController.swift in Sources */,
 				532BFBA926DEA05B00868EAD /* AppDelegate.swift in Sources */,
 				532BFBAB26DEA05B00868EAD /* SceneDelegate.swift in Sources */,
 			);
@@ -368,13 +428,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EAK9WQ34RK;
 				INFOPLIST_FILE = demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.YOUR-COMPANY-NAME.demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trailze.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,13 +448,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = EAK9WQ34RK;
 				INFOPLIST_FILE = demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.YOUR-COMPANY-NAME.demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trailze.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
