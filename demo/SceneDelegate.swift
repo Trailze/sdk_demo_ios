@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let options = optionsBuilder.build()
         TrailzeApp.configure(with: options)
 
-        let logo = UIImage(named: "logo")!
-        let viewController = getTrailzeSearchUI(logo: logo)
+        
+        let viewController = MainViewController()
                 
         self.setViewControllerForWindow(window, viewController)
     }
