@@ -44,7 +44,7 @@ public class ModularMaplessNavigationViewController: UIViewController, ModularNa
         guard let firstRoute = self.routes.first else {
             fatalError("Routes can't be empty")
         }
-        self.navService = TRLNavigationService.init(route: firstRoute)
+        self.navService = TRLNavigationService.init(route: firstRoute, simulating: self.options.simulateNavigation)
         if (!self.options.playInstructionAudio) {
             navService.voiceController = nil
         }

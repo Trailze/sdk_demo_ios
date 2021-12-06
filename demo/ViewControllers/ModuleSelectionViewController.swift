@@ -32,6 +32,12 @@ class ModuleSelectionViewController: UIViewController {
         return toggle
     }()
     
+    private lazy var simulateNavigationToggle: LabeledToggle = {
+        let toggle = LabeledToggle.createLabeledSwitch(title: "Simulate Navigation")
+        toggle.isOn = false
+        return toggle
+    }()
+    
     private lazy var darkOverlay: UIView = {
         let v = UIView()
         v.backgroundColor = .init(white: 0, alpha: 0.8)
@@ -85,7 +91,7 @@ class ModuleSelectionViewController: UIViewController {
             view.addSubview(v)
         }
         
-        for v in [showManeuverToggle, showInstructionToggle, playInstructionAudioToggle, showTimeAndDistanceToggle, continueButton, cancelButton] {
+        for v in [showManeuverToggle, showInstructionToggle, playInstructionAudioToggle, showTimeAndDistanceToggle, simulateNavigationToggle, continueButton, cancelButton] {
             container.addSubview(v)
         }
         
@@ -123,8 +129,13 @@ class ModuleSelectionViewController: UIViewController {
             make.left.right.equalToSuperview().inset(20)
         }
         
+        simulateNavigationToggle.snp.makeConstraints { make in
+            make.top.equalTo(showTimeAndDistanceToggle.snp.bottom).offset(20)
+            make.left.right.equalToSuperview().inset(20)
+        }
+        
         continueButton.snp.makeConstraints { make in
-            make.top.equalTo(showTimeAndDistanceToggle.snp.bottom).offset(30)
+            make.top.equalTo(simulateNavigationToggle.snp.bottom).offset(30)
             make.right.equalToSuperview().inset(30)
             make.bottom.equalToSuperview().inset(20)
             make.height.equalTo(45)
@@ -152,7 +163,8 @@ class ModuleSelectionViewController: UIViewController {
         let options = ModularNavigationViewControllerOptions.init(showManeuver: showManeuverToggle.isOn,
                                                                   showInstruction: showInstructionToggle.isOn,
                                                                   playInstructionAudio: playInstructionAudioToggle.isOn,
-                                                                  showTimeAndDistance: showTimeAndDistanceToggle.isOn)
+                                                                  showTimeAndDistance: showTimeAndDistanceToggle.isOn,
+                                                                  simulateNavigation: simulateNavigationToggle.isOn)
         startNavigationCompletion(self, options)
     }
 }

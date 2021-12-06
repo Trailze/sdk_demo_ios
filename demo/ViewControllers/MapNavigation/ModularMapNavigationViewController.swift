@@ -18,15 +18,19 @@ public struct ModularNavigationViewControllerOptions {
     let showInstruction: Bool
     let playInstructionAudio: Bool
     let showTimeAndDistance: Bool
+    let simulateNavigation: Bool
     
     public init(showManeuver: Bool = false,
          showInstruction: Bool = false,
          playInstructionAudio: Bool = false,
-         showTimeAndDistance: Bool = false) {
+         showTimeAndDistance: Bool = false,
+         simulateNavigation: Bool = false
+         ) {
         self.showManeuver = showManeuver
         self.showInstruction = showInstruction
         self.playInstructionAudio = playInstructionAudio
         self.showTimeAndDistance = showTimeAndDistance
+        self.simulateNavigation = simulateNavigation
     }
 }
 
@@ -62,7 +66,7 @@ public class ModularMapNavigationViewController: UIViewController, ModularNaviga
         guard let firstRoute = self.routes.first else {
             fatalError("Routes can't be empty")
         }
-        self.navService = TRLNavigationService.init(route: firstRoute)
+        self.navService = TRLNavigationService.init(route: firstRoute, simulating: self.options.simulateNavigation)
         if (!self.options.playInstructionAudio) {
             navService.voiceController = nil
         }
