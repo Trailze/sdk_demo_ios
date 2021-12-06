@@ -5,8 +5,8 @@ target 'demo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-pod 'MapboxCoreNavigation', :git => 'https://github.com/Trailze/mapbox-navigation-ios.git', :tag => 'trailze-v1.0.1'
-pod 'MapboxNavigation', :git => 'https://github.com/Trailze/mapbox-navigation-ios.git', :tag => 'trailze-v1.0.1'
+pod 'MapboxCoreNavigation', :git => 'https://github.com/Trailze/mapbox-navigation-ios.git', :tag => 'trailze-v1.0.2'
+pod 'MapboxNavigation', :git => 'https://github.com/Trailze/mapbox-navigation-ios.git', :tag => 'trailze-v1.0.2'
 pod 'MapboxGeocoder.swift', '~> 0.12'
   
 end
