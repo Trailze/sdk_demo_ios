@@ -19,6 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let optionsBuilder = OptionsBuilder()
             .addApiToken(trailzeToken)
             .addMapBoxToken(mapboxToken)
+            .addUserId(UUID().uuidString)
+            .setBaseRouteColor(UIColor(red: 0.35, green: 0.67, blue: 0.96, alpha: 1.00))
+            .setSafeRouteColor(UIColor(red: 0.47, green: 0.76, blue: 0.29, alpha: 1.00))
+            .setDangerousRouteColor(UIColor(red: 0.91, green: 0.20, blue: 0.28, alpha: 1.00))
                         
         let options = optionsBuilder.build()
         TrailzeApp.configure(with: options)
