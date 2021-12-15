@@ -54,7 +54,19 @@ public class ModularMapNavigationViewController: UIViewController, ModularNaviga
         b.tintColor = .white
         b.backgroundColor = .systemRed
         b.layer.cornerRadius = 30
-        b.addTarget(self, action: #selector(exitButtonAction), for: .touchUpInside)
+        b.addTarget(self, action: #selector(exitAction), for: .touchUpInside)
+        return b
+    }()
+    
+    private lazy var recenterButton: UIButton = {
+        let b = UIButton()
+        b.setTitle("Recenter", for: .normal)
+        b.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        b.tintColor = .white
+        b.backgroundColor = .systemGreen
+        b.layer.cornerRadius = 30
+        b.addTarget(self, action: #selector(recenterAction), for: .touchUpInside)
+        b.isHidden = true
         return b
     }()
 
@@ -80,6 +92,7 @@ public class ModularMapNavigationViewController: UIViewController, ModularNaviga
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        self.mapViewController.delegate = self
         navService.trailzeNavigationServiceDelegate = self
         embed(mapViewController, parentView: view)
         navigationComponents.append(mapViewController)
@@ -94,12 +107,22 @@ public class ModularMapNavigationViewController: UIViewController, ModularNaviga
         if (options.showTimeAndDistance) {
             setupBottomContainer()
         } else {
-            view.addSubview(exitButton)
+            for v in [exitButton, recenterButton] {
+                view.addSubview(v)
+            }
+            
             exitButton.snp.makeConstraints { (make) in
                 make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(50)
                 make.right.equalToSuperview().inset(16)
                 make.height.equalTo(60)
                 make.width.equalTo(70)
+            }
+            
+            recenterButton.snp.makeConstraints { (make) in
+                make.centerY.equalTo(exitButton)
+                make.right.equalTo(exitButton.snp.left).inset(-20)
+                make.height.equalTo(60)
+                make.width.equalTo(110)
             }
         }
     }
@@ -169,6 +192,14 @@ public class ModularMapNavigationViewController: UIViewController, ModularNaviga
             make.height.equalTo(60)
             make.width.equalTo(70)
         }
+
+        bottomContainerView.addSubview(recenterButton)
+        recenterButton.snp.makeConstraints { (make) in
+            make.centerY.equalTo(exitButton)
+            make.right.equalTo(exitButton.snp.left).inset(-20)
+            make.height.equalTo(60)
+            make.width.equalTo(110)
+        }
     }
     
     private func embed(_ vc: UIViewController, parentView: UIView) {
@@ -183,9 +214,13 @@ public class ModularMapNavigationViewController: UIViewController, ModularNaviga
         navService.start()
     }
     
-    @objc func exitButtonAction() {
+    @objc func exitAction() {
         navService.stop()
         delegate?.didTapDismiss()
+    }
+    
+    @objc private func recenterAction() {
+        mapViewController.tracksUserCourse = true
     }
 }
 
@@ -230,5 +265,15 @@ extension ModularMapNavigationViewController: VoiceControllerDelegate {
 
     public func voiceController(_ voiceController: RouteVoiceController, willSpeak instruction: SpokenInstruction, routeProgress: RouteProgress) -> SpokenInstruction? {
         return instruction
+    }
+}
+
+extension ModularMapNavigationViewController: TRLMapNavigationViewControllerDelegate {
+    public func navigationMapViewDidStartTrackingCourse(_ mapView: NavigationMapView) {
+        recenterButton.isHidden = true
+    }
+    
+    public func navigationMapViewDidStopTrackingCourse(_ mapView: NavigationMapView) {
+        recenterButton.isHidden = false
     }
 }
