@@ -18,9 +18,8 @@ class InstructionViewController: UIViewController {
         l.text = ""
         l.font = .systemFont(ofSize: 30, weight: .bold)
         l.lineBreakMode = .byWordWrapping
-        l.numberOfLines = 0
+        l.numberOfLines = 2
         l.textAlignment = .left
-        
         return l
     }()
     
@@ -37,5 +36,15 @@ class InstructionViewController: UIViewController {
 extension InstructionViewController: TRLNavigationServiceDelegate {    
     func navigationService(didPassVisualInstructionPoint instruction: VisualInstructionBanner, routeProgress: RouteProgress) {
         instructionLabel.text = instruction.primaryInstruction.text
+        
+        var height = CGFloat.infinity
+        instructionLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        while height > instructionLabel.frame.size.height {
+            let pointSize = instructionLabel.font.pointSize - 1
+            instructionLabel.font = .systemFont(ofSize: pointSize, weight: .bold)
+            let maximumLabelSize: CGSize = CGSize.init(width: instructionLabel.frame.size.width, height: CGFloat.infinity)
+            let expectSize: CGSize = instructionLabel.sizeThatFits(maximumLabelSize)
+            height = expectSize.height
+        }
     }
 }
