@@ -2,7 +2,7 @@
 A barebones demo app to get started with the Trailze SDK on iOS 
 
 ## Installation instructions
-- Make sure you have your Mapbox and Trailze access keys.
+- Make sure you have your Mapbox and Trailze access keys. You can get your free Trailze access key here: https://account.trailze.com.
 
 - Clone this repo.
 
