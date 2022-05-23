@@ -82,7 +82,7 @@ public class ModularMapNavigationViewController: UIViewController, ModularNaviga
         if (!self.options.playInstructionAudio) {
             navService.voiceController = nil
         }
-        self.mapViewController = TRLMapNavigationViewController.init(route: firstRoute, navigationService: navService.navigationService)
+        self.mapViewController = TRLMapNavigationViewController.init(route: firstRoute, navigationService: navService.navigationService)    
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -30,6 +30,10 @@ class MainViewController: UIViewController {
         menuButton(title: "Modular UI (mapless)", action: #selector(modularMaplessNavigationAction))
     }()
     
+    private lazy var modularMapNoGeocodingNavigationButton: UIButton = {
+        menuButton(title: "Modular UI (map w/o geocoding)", action: #selector(modularMapNoGeocodingNavigationAction))
+    }()
+    
     private lazy var container: UIView = {
         let v = UIView()
         v.backgroundColor = UIColor.init(white: 0.9, alpha: 1)
@@ -43,7 +47,7 @@ class MainViewController: UIViewController {
         view.backgroundColor = UIColor.init(red: 0.1, green: 0.5, blue: 0.8, alpha: 1.0)
         
         view.addSubview(container)
-        for v in [titleLabel, batteriesIncludedButton, modularMapNavigationButton, modularMaplessNavigationButton] {
+        for v in [titleLabel, batteriesIncludedButton, modularMapNavigationButton, modularMaplessNavigationButton, modularMapNoGeocodingNavigationButton] {
             container.addSubview(v)
         }
     
@@ -73,6 +77,12 @@ class MainViewController: UIViewController {
             make.top.equalTo(modularMapNavigationButton.snp.bottom).offset(25)
             make.left.right.equalToSuperview().inset(10)
             make.height.equalTo(50)
+        }
+        
+        modularMapNoGeocodingNavigationButton.snp.makeConstraints { make in
+            make.top.equalTo(modularMaplessNavigationButton.snp.bottom).offset(25)
+            make.left.right.equalToSuperview().inset(10)
+            make.height.equalTo(50)
             make.bottom.equalToSuperview().inset(40)
         }
     }
@@ -100,6 +110,11 @@ class MainViewController: UIViewController {
     
     @objc private func modularMaplessNavigationAction() {
         let vc = AddressSearchViewController(with: .maplessModular)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func modularMapNoGeocodingNavigationAction() {
+        let vc = CoordinateEntryViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
